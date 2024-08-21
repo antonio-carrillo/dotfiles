@@ -2,6 +2,10 @@
 
 ## Arch Linux
 
+### Terminal
+
+- [kitty](https://github.com/kovidgoyal/kitty) - Terminal
+
 ### Managers and players
 
 - [neovim](https://github.com/neovim/neovim) - TUI text and code editor
