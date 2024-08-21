@@ -8,6 +8,7 @@
 - [zsh](https://www.zsh.org) - Shell
     - [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     - [syntax-highlight](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [Starship](https://github.com/starship/starship) - Shell status information
 
 ### Managers and players
 

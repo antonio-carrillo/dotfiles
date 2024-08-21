@@ -1,0 +1,90 @@
+add_newline = false
+format = """\
+[](fg:#4444dd)\
+$os\
+[](fg:#4444dd bg:blue)\
+$username\
+$hostname\
+[](fg:blue bg:black)\
+$directory\
+[](fg:black)\
+($git_branch)\
+($git_status)\
+( $fill )\
+($python )\
+($jobs )\
+($status )\
+$time
+[◥](fg:#4444dd)\
+($character)\
+"""
+
+right_format = """\
+"""
+
+[directory]
+style = 'bold bg:black fg:white'
+format = """\
+[$path]($style)\
+[$read_only]($read_only_style)\
+"""
+truncation_length = 4
+truncation_symbol = '…/'
+read_only = '󰌾'
+
+[fill]
+symbol = '·'
+style = 'bold black'
+
+[jobs]
+format = '[$symbol$number]($style)'
+symbol = ''
+style = 'fg:purple'
+
+[hostname]
+ssh_only = false
+style = 'bold bg:blue fg:black'
+format = '[@$hostname]($style)'
+
+[git_branch]
+style = 'fg:bright-blue'
+symbol = '󰘬'
+format = '[$symbol$branch(:$remote_branch)]($style)'
+
+[git_status]
+style = 'fg:blue'
+diverged = '⇅'
+renamed = '→'
+deleted = '-'
+
+[os]
+style = 'bold bg:#4444dd fg:white'
+format = '[$symbol($version)]($style)'
+disabled = false
+
+[os.symbols]
+Arch = '󰣇'
+
+[python]
+symbol = ''
+format = '[$symbol$virtualenv(:$version)]($style)'
+version_format = '$major.$minor'
+
+[status]
+format = '[$symbol$status]($style)'
+symbol = '!'
+not_executable_symbol = '⊖'
+not_found_symbol = '?'
+style = 'bg:red fg:yellow'
+disabled = false
+
+[time]
+format = '[$time]($style)'
+style = 'fg:white'
+disabled = false
+
+[username]
+style_root = 'bold bg:blue fg:red'
+style_user = 'bold bg:blue fg:black'
+format = '[$user]($style)'
+show_always = true
