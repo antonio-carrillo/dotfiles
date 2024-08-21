@@ -53,9 +53,11 @@ format = '[$symbol$branch(:$remote_branch)]($style)'
 
 [git_status]
 style = 'fg:blue'
-diverged = '⇅'
 renamed = '→'
 deleted = '-'
+ahead = '⇡${count}'
+diverged = '⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
 
 [os]
 style = 'bold bg:#4444dd fg:white'
