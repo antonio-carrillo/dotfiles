@@ -2,6 +2,11 @@
 
 ## Arch Linux
 
+### Desktop
+
+- [pipewire](https://gitlab.freedesktop.org/pipewire/pipewire) - Audio server
+- [swww](https://github.com/LGFae/swww) - Wallpaper manager
+
 ### Terminal
 
 - [kitty](https://github.com/kovidgoyal/kitty) - Terminal
