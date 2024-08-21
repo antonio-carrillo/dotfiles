@@ -1,0 +1,40 @@
+# shortenings
+alias v='nvim'
+
+# exa (and machine versions)
+alias ls='exa -gh --icons=auto'
+alias lsm='exa -g --icons=never --color=never'
+alias tree='exa --tree --icons=auto'
+alias treem='exa --tree --icons=never --color=never'
+
+# Git
+alias g='git'
+alias ga='git add'
+alias gaa='git add -A'
+alias gae='git add -e'
+alias gap='git add -p'
+alias gb='git branch'
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gcan='git commit --amend --no-edit'
+alias gcmsg='git commit --message'
+alias gco='git checkout'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gf='git fetch'
+alias gl='git log'
+alias glg='git log --graph --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)" --all'
+alias glgd='git log --graph --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n""          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)"'
+alias gpl='git pull'
+alias gps='git push'
+alias grb='git rebase'
+alias grs='git reset'
+alias grsh='git reset --hard'
+alias grss='git reset --soft'
+alias gs='git status'
+alias gss='git status --short'
+
+# Kittens
+alias ki='kitten icat'
+alias kic='kitten icat --clear'
+alias kih='kitten icat --hold'

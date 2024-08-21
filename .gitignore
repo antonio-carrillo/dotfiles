@@ -1,2 +1,6 @@
+# neovim
 .config/nvim/env/
 .config/nvim/lazy-lock.json
+
+# zsh
+.config/zsh/plugins/

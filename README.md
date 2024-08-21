@@ -5,6 +5,9 @@
 ### Terminal
 
 - [kitty](https://github.com/kovidgoyal/kitty) - Terminal
+- [zsh](https://www.zsh.org) - Shell
+    - [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+    - [syntax-highlight](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ### Managers and players
 
