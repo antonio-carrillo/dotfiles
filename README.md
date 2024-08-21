@@ -4,6 +4,9 @@
 
 ### Desktop
 
+- [Ly](https://github.com/fairyglade/ly) - TUI display manager
+- [Hyprland](https://github.com/hyprwm/Hyprland) - Tiling window manager, Wayland compositor
+    - [hyprlock](https://github.com/hyprwm/hyprlock) - Lock screen for Hyprland
 - [pipewire](https://gitlab.freedesktop.org/pipewire/pipewire) - Audio server
 - [swww](https://github.com/LGFae/swww) - Wallpaper manager
 
