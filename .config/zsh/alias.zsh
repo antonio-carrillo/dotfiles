@@ -2,10 +2,10 @@
 alias v='nvim'
 
 # exa (and machine versions)
-alias ls='exa -gh --icons=auto'
-alias lsm='exa -g --icons=never --color=never'
-alias tree='exa --tree --icons=auto'
-alias treem='exa --tree --icons=never --color=never'
+alias ls='eza -gh --icons=auto'
+alias lsm='eza -g --icons=never --color=never'
+alias tree='eza --tree --icons=auto'
+alias treem='eza --tree --icons=never --color=never'
 
 # Git
 alias g='git'

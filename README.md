@@ -27,7 +27,7 @@
 
 ### Commands
 
-- [exa](https://github.com/ogham/exa) - List files and show directory tree
+- [eza](https://github.com/eza-community/eza) - List files and show directory tree
 
 ### Appearance
 
