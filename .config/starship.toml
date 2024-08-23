@@ -15,12 +15,16 @@ $directory\
 ($jobs )\
 ($status )\
 $time
-[◥](fg:#4444dd)\
-($character)\
+[ ](fg:#4444dd)\
+($character) \
 """
 
 right_format = """\
 """
+
+[character]
+style = 'fg:blue'
+format = '[\[]($style)$symbol(bold)[\]]($style)'
 
 [directory]
 style = 'bold bg:black fg:white'
