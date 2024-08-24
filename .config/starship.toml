@@ -2,10 +2,12 @@ add_newline = false
 format = """\
 [](fg:#4444dd)\
 $os\
-[](fg:#4444dd bg:blue)\
+[](fg:#4444dd bg:#6464dd)\
+[](fg:#6464dd bg:blue)\
 $username\
 $hostname\
-[](fg:blue bg:black)\
+[](fg:blue bg:#555555)\
+[](fg:#555555 bg:black)\
 $directory\
 [](fg:black)\
 ($git_branch)\
@@ -15,7 +17,6 @@ $directory\
 ($jobs )\
 ($status )\
 $time
-[ ](fg:#4444dd)\
 ($character) \
 """
 
@@ -23,8 +24,13 @@ right_format = """\
 """
 
 [character]
-style = 'fg:blue'
-format = '[\[]($style)$symbol(bold)[\]]($style)'
+format = '[$symbol](bold)'
+success_symbol = '[](green)'
+error_symbol = '[](red)'
+vimcmd_symbol = '[-](green)'
+vimcmd_replace_one_symbol = '[_](purple)'
+vimcmd_replace_symbol = '[_](purple)'
+vimcmd_visual_symbol = '[█](green)'
 
 [directory]
 style = 'bold bg:black fg:white'
