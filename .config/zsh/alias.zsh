@@ -33,6 +33,13 @@ alias grsh='git reset --hard'
 alias grss='git reset --soft'
 alias gs='git status'
 alias gss='git status --short'
+alias gst='git stash'
+alias gstl='git stash list'
+alias gstpo='git stash pop'
+alias gstpu='git stash push'
+alias gstpum='git stash push --message'
+alias gstpuu='git stash push --include-untracked'
+alias gsts='git stash show'
 
 # Kittens
 alias ki='kitten icat'
