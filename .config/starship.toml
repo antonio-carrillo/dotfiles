@@ -75,7 +75,19 @@ format = '[$symbol($version)]($style)'
 disabled = false
 
 [os.symbols]
+Android = ''
 Arch = '󰣇'
+Debian = ''
+Kali = ''
+Linux = ''
+Macos = ''
+Mint = '󰣭'
+Pop = ''
+Raspbian = ''
+Redhat = '󱄛'
+Ubuntu = ''
+Unknown = '?'
+Windows = ''
 
 [python]
 symbol = ''
