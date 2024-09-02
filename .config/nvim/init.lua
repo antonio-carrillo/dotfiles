@@ -1,4 +1,7 @@
+-- Plugins
 require('tiah.lazy')
-require('tiah.remap')
+
+-- Editor
 require('tiah.editor')
+require('tiah.keymaps')
 require('tiah.languages')
