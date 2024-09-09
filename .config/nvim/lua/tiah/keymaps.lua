@@ -18,7 +18,7 @@ vim.keymap.set('n', '*', '*zzzv')
 vim.keymap.set('n', '#', '#zzzv')
 
 -- Copy and pasting
-vim.keymap.set('x', '<leader>p', '"_dp')
+vim.keymap.set('x', '<leader>pp', '"_dp')
 vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>Y', '"+Y')
 vim.keymap.set('v', '<leader>d', '"_d')
