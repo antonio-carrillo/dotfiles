@@ -9,8 +9,9 @@
     // Modules are in order
     "modules-left": [
         "hyprland/workspaces",
-        "custom/arrow-black-right",
-        "hyprland/window"
+        "custom/arrow-black-blue-right",
+        "hyprland/window",
+        "custom/arrow-blue-right"
     ],
     "modules-center": [
         "custom/arrow-black-left",
@@ -38,10 +39,10 @@
     "custom/arrow-black-right": {
         "format": ""
     },
-    "custom/arrow-blue-black-left": {
+    "custom/arrow-black-blue-left": {
         "format": ""
     },
-    "custom/arrow-blue-black-right": {
+    "custom/arrow-black-blue-right": {
         "format": ""
     },
     "custom/arrow-blue-left": {
@@ -50,6 +51,18 @@
     "custom/arrow-blue-right": {
         "format": ""
     },
+    "custom/arrow-blue-black-left": {
+        "format": ""
+    },
+    "custom/arrow-blue-black-right": {
+        "format": ""
+    },
+    "custom/chevron-white-left": {
+        "format": ""
+    },
+    "custom/chevron-white-right": {
+        "format": ""
+    },
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -57,7 +70,13 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "hyprland/window": {
-         "separate-outputs": true
+        "format": "{title}",
+        "icon": true,
+        "icon-size": 12,
+        "rewrite": {
+            "(.*) — Zen Browser": "Zen 󰖟 | $1"
+        },
+        "separate-outputs": true
     },
     "tray": {
         // "icon-size": 21,
@@ -132,14 +151,14 @@
     },
     "custom/power": {
         "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "shutdown -r",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
+            "shutdown": "shutdown",
+            "reboot": "shutdown -r",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
+        }
     }
 }

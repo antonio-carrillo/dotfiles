@@ -83,6 +83,16 @@ button {
     color: @black-bright;
 }
 
+#window {
+    background: @blue-normal;
+    color: @black-normal;
+    padding: 0 10px;
+}
+
+window#waybar.empty #window {
+    padding: 0;
+}
+
 /* Customs */
 
 #custom-arrow-black-left,
@@ -94,6 +104,13 @@ button {
 #custom-arrow-blue-left,
 #custom-arrow-blue-right {
     color: @blue-normal;
+    font-size: 20px;
+}
+
+#custom-arrow-black-blue-left,
+#custom-arrow-black-blue-right {
+    background: @blue-normal;
+    color: @black-normal;
     font-size: 20px;
 }
 
