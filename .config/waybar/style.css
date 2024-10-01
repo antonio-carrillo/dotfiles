@@ -61,6 +61,16 @@ button {
     color: @blue-bright;
 }
 
+#window {
+    background: @blue-normal;
+    color: @black-normal;
+    padding: 0 10px;
+}
+
+window#waybar.empty #window {
+    padding: 0;
+}
+
 #pulseaudio {
     color: @red-normal;
 }
@@ -81,16 +91,6 @@ button {
 
 #network.disconnected {
     color: @black-bright;
-}
-
-#window {
-    background: @blue-normal;
-    color: @black-normal;
-    padding: 0 10px;
-}
-
-window#waybar.empty #window {
-    padding: 0;
 }
 
 /* Customs */
