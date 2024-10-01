@@ -1,3 +1,5 @@
+@import "moonfly.css";
+
 * {
     font-family: '0xProto Nerd Font Mono';
     font-size: 13px;
@@ -5,7 +7,7 @@
 
 window#waybar {
     background-color: rgba(8, 8, 8, 0.8);
-    color: #9e9e9e;
+    color: @foreground;
 }
 
 button {
@@ -25,13 +27,13 @@ button {
 #pulseaudio,
 #temperature,
 #tray {
-    background: #1a1a1a;
+    background: @black-normal;
     padding: 0 10px;
 }
 
 #workspaces {
-    background: #405080;
-    color: #bdbdbd;
+    background: @black-normal;
+    color: @black-bright;
     margin: 0;
     padding: 0;
 }
@@ -51,41 +53,59 @@ button {
     text-shadow: inherit;
 }
 
-#workspaces button.focused {
-    background: #80a0ff;
-    color: #323437;
+#workspaces button.visible {
+    color: @white-normal;
+}
+
+#workspaces button.active {
+    color: @blue-bright;
 }
 
 #pulseaudio {
-    color: #ff5454;
+    color: @red-normal;
 }
 
 #pulseaudio.muted {
-    color: #323437;
+    color: @black-bright;
+}
+
+#network,
+#network.linked {
+    color: @blue-normal;
+}
+
+#network.disabled {
+    color: @white-normal;
+}
+
+
+#network.disconnected {
+    color: @black-bright;
 }
 
 /* Customs */
 
 #custom-arrow-black-left,
 #custom-arrow-black-right {
-    color: #1a1a1a;
+    color: @black-normal;
     font-size: 20px;
 }
 
 #custom-arrow-blue-left,
 #custom-arrow-blue-right {
-    color: #405080;
+    color: @blue-normal;
     font-size: 20px;
 }
 
 #custom-arrow-blue-black-left,
 #custom-arrow-blue-black-right {
-    background: #1a1a1a;
-    color: #405080;
+    background: @black-normal;
+    color: @blue-normal;
     font-size: 20px;
 }
 
 #custom-power {
-    background: #405080;
-    color: #bdbdbd;
+    background: @blue-normal;
+    color: @black-normal;
+    padding: 0 0 0 8px;
 }

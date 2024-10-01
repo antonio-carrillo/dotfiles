@@ -9,7 +9,7 @@
     // Modules are in order
     "modules-left": [
         "hyprland/workspaces",
-        "custom/arrow-blue-right",
+        "custom/arrow-black-right",
         "hyprland/window"
     ],
     "modules-center": [
@@ -67,10 +67,11 @@
         "format": "{:%a}"
     },
     "clock#2": {
-        "format": "{:%T}"
+        "format": "{:%m-%d}"
     },
     "clock#3": {
-        "format": "{:%m-%d}"
+        "format": "{:%T}",
+        "interval": 1
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -101,6 +102,7 @@
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
+        "interval": 30,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} 󰈀",
