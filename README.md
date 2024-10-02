@@ -48,3 +48,7 @@ community packages.
         - Nerd Font: [IBM Plex Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/IBMPlexMono) - `ttf-ibmplex-mono-nerd`
     - [3270](https://github.com/rbanffy/3270font):
         - Nerd Font: [3270 Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/3270) - `ttf-3270-nerd`
+
+### Tools
+
+- Desktop bar: [waybar](https://github.com/Alexays/Waybar) - `waybar`
