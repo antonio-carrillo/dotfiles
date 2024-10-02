@@ -3,11 +3,7 @@ format = """\
 [](fg:#4444dd)\
 $os\
 [](fg:#4444dd bg:#6464dd)\
-[](fg:#6464dd bg:blue)\
-$username\
-$hostname\
-[](fg:blue bg:#555555)\
-[](fg:#555555 bg:black)\
+[](fg:#6464dd bg:black)\
 $directory\
 [](fg:black)\
 ($git_branch)\
