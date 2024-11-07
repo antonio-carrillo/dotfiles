@@ -1,7 +1,7 @@
 # shortenings
 alias v='nvim'
 
-# exa (and machine versions)
+# eza (and machine versions)
 alias ls='eza -gh --icons=auto'
 alias lsm='eza -g --icons=never --color=never'
 alias tree='eza --tree --icons=auto'
@@ -29,7 +29,6 @@ alias gpl='git pull'
 alias gps='git push'
 alias grb='git rebase'
 alias grs='git reset'
-alias grsh='git reset --hard'
 alias grss='git reset --soft'
 alias gs='git status'
 alias gss='git status --short'
