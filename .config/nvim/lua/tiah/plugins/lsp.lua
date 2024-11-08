@@ -43,7 +43,7 @@ return {
         'markdown_oxide',
         'rust_analyzer',
         'sqlls',
-        'tsserver',
+        'ts_ls',
         'yamlls',
       },
       handlers = {
