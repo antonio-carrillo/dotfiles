@@ -32,10 +32,14 @@ community packages.
 
 ### Commands
 
+- Print file - [bat](https://github.com/sharkdp/bat) - `bat`
 - File lister - [eza](https://github.com/eza-community/eza) - `eza`
+- File finder - [fd](https://github.com/sharkdp/fd) - `fd`
+- Fuzzy finder - [fzf](https://github.com/junegunn/fzf) - `fzf`
 - Patter searcher:
     - [ripgrep](https://github.com/BurntSushi/ripgrep) - `ripgrep`
     - [ripgrep-all](https://github.com/phiresky/ripgrep-all) - `ripgrep-all`
+- Directory navigator - [zoxide](https://github.com/ajeetdsouza/zoxide) - `zoxide`
 
 ### Appearance
 
