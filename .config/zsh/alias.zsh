@@ -1,7 +1,11 @@
 # shortenings
 alias v='nvim'
 
-# eza (and machine versions)
+# bat
+alias batm='bat --style=plain --color=never'
+alias batp='bat --paging=always --wrap=never'
+
+# eza
 alias ls='eza -gh --icons=auto'
 alias lsm='eza -g --icons=never --color=never'
 alias tree='eza --tree --icons=auto'
