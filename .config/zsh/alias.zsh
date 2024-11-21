@@ -1,3 +1,7 @@
+# Debian retrorenaming
+[ -s "/usr/bin/batcat" ] && alias bat='batcat'
+[ -s "/usr/bin/fdfind" ] && alias fd='fdfind'
+
 # shortenings
 alias v='nvim'
 
