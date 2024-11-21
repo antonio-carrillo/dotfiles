@@ -67,7 +67,7 @@ behind = '⇣${count}'
 
 [os]
 style = 'bold bg:#4444dd fg:white'
-format = '[$symbol($version)]($style)'
+format = '[$symbol ($version)]($style)'
 disabled = false
 
 [os.symbols]
