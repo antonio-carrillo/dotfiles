@@ -17,6 +17,7 @@ button {
 
 #backlight,
 #battery,
+#bluetooth,
 #clock.1,
 #clock.2,
 #clock.3,
@@ -69,6 +70,27 @@ button {
 
 window#waybar.empty #window {
     padding: 0;
+}
+
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected {
+    color: @blue-normal;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @white-normal;
+}
+
+#bluetooth.discoverable,
+#bluetooth.discovering,
+#bluetooth.pairable {
+    color: @green-bright;
+}
+
+#bluetooth.no-controler {
+    color: @white-normal;
 }
 
 #pulseaudio {
