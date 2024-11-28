@@ -3,14 +3,20 @@ vim.api.nvim_create_autocmd('FileType', {
   callback = function(args)
     local filetype = vim.bo[args.buf].filetype
 
-    if filetype == 'cpp' then
-      vim.opt.tabstop = 2
-      vim.opt.softtabstop = 2
-      vim.opt.shiftwidth = 2
-    elseif filetype == 'lua' then
-      vim.opt.tabstop = 2
-      vim.opt.softtabstop = 2
-      vim.opt.shiftwidth = 2
+    local two_tabstop = {
+      'cpp',
+      'css',
+      'lua',
+      'html',
+      'htmldjango',
+    }
+
+    for _, language in ipairs(two_tabstop) do
+      if filetype == language then
+        vim.opt.tabstop = 2
+        vim.opt.softtabstop = 2
+        vim.opt.shiftwidth = 2
+      end
     end
   end
 })
