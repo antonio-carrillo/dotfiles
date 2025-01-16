@@ -13,6 +13,7 @@ alias batp='bat --paging=always --wrap=never'
 alias ls='eza -gh --icons=auto'
 alias lsm='eza -g --icons=never --color=never'
 alias tree='eza --tree --icons=auto'
+alias treed='eza --tree --icons=auto --only-dirs'
 alias treem='eza --tree --icons=never --color=never'
 
 # Git
