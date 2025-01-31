@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd('FileType', {
       'lua',
       'html',
       'htmldjango',
+      'markdown',
     }
 
     for _, language in ipairs(two_tabstop) do
