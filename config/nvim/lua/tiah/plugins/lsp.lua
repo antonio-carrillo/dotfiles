@@ -41,6 +41,7 @@ return {
         'jsonls',
         'lua_ls',
         'markdown_oxide',
+        'pylsp',
         'rust_analyzer',
         'sqlls',
         'ts_ls',
