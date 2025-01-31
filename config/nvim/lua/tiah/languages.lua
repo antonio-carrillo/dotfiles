@@ -6,9 +6,9 @@ vim.api.nvim_create_autocmd('FileType', {
     local two_tabstop = {
       'cpp',
       'css',
-      'lua',
       'html',
       'htmldjango',
+      'lua',
       'markdown',
     }
 
