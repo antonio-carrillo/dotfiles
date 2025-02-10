@@ -1,0 +1,5 @@
+action = type copy
+files = all
+no-frecency = True
+typer = wtype
+clipboarder = wl-copy
