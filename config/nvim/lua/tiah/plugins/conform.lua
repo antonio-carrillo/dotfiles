@@ -4,6 +4,8 @@ return {
     require('conform').setup({
       c = { 'clang-format' },
       cpp = { 'clang-format' },
+      css = { 'prettier' },
+      js = { 'prettier' },
       lua = { 'stylua' },
       python = { 'autopep8' },
     })
