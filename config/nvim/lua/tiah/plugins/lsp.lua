@@ -36,7 +36,6 @@ return {
         'cssls',
         'docker_compose_language_service',
         'dockerls',
-        'html',
         'jedi_language_server',
         'jsonls',
         'lua_ls',
