@@ -8,6 +8,7 @@ vim.api.nvim_create_autocmd('FileType', {
       'css',
       'html',
       'htmldjango',
+      'javascript',
       'json',
       'json5',
       'lua',
