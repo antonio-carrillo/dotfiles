@@ -37,6 +37,7 @@ return {
         'docker_compose_language_service',
         'dockerls',
         'jedi_language_server',
+        'jinja_lsp',
         'jsonls',
         'lua_ls',
         'markdown_oxide',
@@ -49,6 +50,59 @@ return {
       handlers = {
         function(server_name)
           require('lspconfig')[server_name].setup({})
+        end,
+
+        pylsp = function()
+          require('lspconfig').pylsp.setup({
+            settings = {
+              jinja_lsp = {
+                extension = {
+                  jinja = 'jinja',
+                  jinja2 = 'jinja2',
+                  j2 = 'j2',
+                },
+              },
+              pylsp = {
+                configurationSources = 'flake8',
+                plugins = {
+                  flake8 = {
+                    enabled = true,
+                    config = './tox.ini',
+                  },
+                  jedi_completion = {
+                    enabled = false,
+                  },
+                  jedi_definition = {
+                    enabled = false,
+                  },
+                  jedi_hover = {
+                    enabled = false,
+                  },
+                  jedi_references = {
+                    enabled = false,
+                  },
+                  jedi_signature_help = {
+                    enabled = false,
+                  },
+                  jedi_symbols = {
+                    enabled = false,
+                  },
+                  mccabe = {
+                    enabled = false,
+                  },
+                  pycodestyle = {
+                    enabled = false,
+                  },
+                  pyflakes = {
+                    enabled = false,
+                  },
+                  yapf = {
+                    enabled = false,
+                  },
+                },
+              },
+            },
+          })
         end,
       },
     })
