@@ -55,19 +55,11 @@ return {
         pylsp = function()
           require('lspconfig').pylsp.setup({
             settings = {
-              jinja_lsp = {
-                extension = {
-                  jinja = 'jinja',
-                  jinja2 = 'jinja2',
-                  j2 = 'j2',
-                },
-              },
               pylsp = {
-                configurationSources = 'flake8',
+                configurationSources = {'flake8'},
                 plugins = {
                   flake8 = {
                     enabled = true,
-                    config = './tox.ini',
                   },
                   jedi_completion = {
                     enabled = false,

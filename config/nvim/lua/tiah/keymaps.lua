@@ -18,8 +18,8 @@ vim.keymap.set('n', '*', '*zzzv')
 vim.keymap.set('n', '#', '#zzzv')
 
 -- Diagnostic navigation 
-vim.keymap.set('n', '<leader>j', vim.diagnostic.goto_prev)
-vim.keymap.set('n', '<leader>k', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>k', vim.diagnostic.goto_prev)
+vim.keymap.set('n', '<leader>j', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<C-j>', function()
     vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
 end)
