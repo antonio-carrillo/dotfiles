@@ -53,3 +53,6 @@ alias gsts='git stash show'
 alias ki='kitten icat'
 alias kic='kitten icat --clear'
 alias kih='kitten icat --hold'
+
+# lsblk
+alias lsblkfull='lsblk -o FSTYPE,TYPE,FSSIZE,FSUSE%,NAME,LABEL,MODEL,MOUNTPOINTS'
