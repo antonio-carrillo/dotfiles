@@ -54,5 +54,21 @@ alias ki='kitten icat'
 alias kic='kitten icat --clear'
 alias kih='kitten icat --hold'
 
+# Python
+alias py-activate='source env/bin/activate'
+alias py-env='pip install \
+    autopep8 \
+    ptpython \
+    flake8 \
+    yapf \
+    jedi \
+    pynvim \
+    tox \
+    '
+alias py-new-env='python3 -m venv env \
+    && py-activate \
+    && py-env \
+    '
+
 # lsblk
 alias lsblkfull='lsblk -o FSTYPE,TYPE,FSSIZE,FSUSE%,NAME,LABEL,MODEL,MOUNTPOINTS'
