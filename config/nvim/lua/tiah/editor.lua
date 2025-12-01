@@ -31,6 +31,9 @@ vim.opt.smartcase = true
 -- Term colors
 vim.opt.termguicolors = true
 
+-- Invisible characters
+vim.opt.listchars = 'eol:$,tab:>-,trail:~,extends:>,precedes:<'
+
 -- Page
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8

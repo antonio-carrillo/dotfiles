@@ -17,6 +17,9 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '*', '*zzzv')
 vim.keymap.set('n', '#', '#zzzv')
 
+-- Show/hide
+vim.keymap.set('n', '<leader><F1>', ':set list!<CR>')
+
 -- Diagnostic navigation 
 vim.keymap.set('n', '<leader>k', vim.diagnostic.goto_prev)
 vim.keymap.set('n', '<leader>j', vim.diagnostic.goto_next)
