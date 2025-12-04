@@ -4,11 +4,15 @@ vim.api.nvim_create_autocmd('FileType', {
     local filetype = vim.bo[args.buf].filetype
 
     local two_tabstop = {
+      'cmake',
       'cpp',
       'css',
       'html',
       'htmldjango',
       'javascript',
+      'javascriptreact',
+      'typescript',
+      'typescriptreact',
       'json',
       'json5',
       'lua',
