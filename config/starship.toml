@@ -1,14 +1,14 @@
 add_newline = false
 format = """\
-[](fg:#4444dd)\
+[](fg:blue)\
 $os\
-[](fg:#4444dd bg:#6464dd)\
-[](fg:#6464dd bg:black)\
+[](fg:blue bg:#596a9b)\
+[](fg:#596a9b bg:black)\
 $directory\
 [](fg:black)\
 ($git_branch)\
 ($git_status)\
-( $fill )\
+($fill )\
 ($python )\
 ($jobs )\
 ($status )\
@@ -39,7 +39,7 @@ truncation_symbol = '…/'
 read_only = '󰌾'
 
 [fill]
-symbol = '·'
+symbol = '–'
 style = 'bold black'
 
 [jobs]
@@ -66,7 +66,7 @@ diverged = '⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
 
 [os]
-style = 'bold bg:#4444dd fg:white'
+style = 'bg:blue fg:black'
 format = '[$symbol ($version)]($style)'
 disabled = false
 
