@@ -70,5 +70,8 @@ alias py-new-env='python3 -m venv env \
     && py-env \
     '
 
+# Tmuxinator
+alias tx='tmuxinator'
+
 # lsblk
 alias lsblkfull='lsblk -o FSTYPE,TYPE,FSSIZE,FSUSE%,NAME,LABEL,MODEL,MOUNTPOINTS'
