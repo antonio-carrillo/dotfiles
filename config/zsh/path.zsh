@@ -1,6 +1,7 @@
 # Path
-export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:$HOME/.local/bin"
+[ -s "/opt/nvim-linux64/bin" ] && export PATH="$PATH:/opt/nvim-linux64/bin"
+[ -s "/opt/nvim-linux-x86_64/bin" ] && export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+[ -s "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 
 # go
 [ -s "/usr/local/go/bin" ] && export PATH=$PATH:/usr/local/go/bin
