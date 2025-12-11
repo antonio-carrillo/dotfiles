@@ -2,12 +2,17 @@ return {
   'stevearc/conform.nvim',
   config = function()
     require('conform').setup({
-      c = { 'clang-format' },
-      cpp = { 'clang-format' },
-      css = { 'prettier' },
-      js = { 'prettier' },
-      lua = { 'stylua' },
-      python = { 'autopep8' },
+      formatters_by_ft ={
+        c = { 'clang-format' },
+        cpp = { 'clang-format' },
+        css = { 'prettierd' },
+        javascript = { 'prettierd' },
+        javascriptreact = { 'prettierd' },
+        lua = { 'stylua' },
+        python = { 'autopep8' },
+        typescript = { 'prettierd' },
+        typescriptreact = { 'prettierd' },
+      },
     })
 
     vim.api.nvim_create_user_command('Format', function(args)
