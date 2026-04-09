@@ -3,7 +3,12 @@ return {
   config = function()
     local nerdicons = require('nerdicons')
 
-    nerdicons.setup({})
+    nerdicons.setup({
+      prompt = ' ',
+      border = 'rounded',
+      preview_prompt = '> ',
+      register = '*',
+    })
 
     vim.keymap.set('n', '<leader>n', vim.cmd.NerdIcons)
   end,
