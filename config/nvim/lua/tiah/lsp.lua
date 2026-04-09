@@ -2,34 +2,34 @@
 -- This requires each LSP server to be installed in the system or the
 -- mason-lspconfig plugin to retrieve it.
 
-vim.lsp.config('*', {
+vim.lsp.config['*'] = {
   root_markers = { '.git' },
-})
+}
 
 -- Bashls
-vim.lsp.config('bashls', {
+vim.lsp.config['bashls'] = {
   cmd = { 'bash-language-server' },
   filetypes = { 'bash', 'sh' },
-})
+}
 vim.lsp.enable('bashls')
 
 -- HTML
-vim.lsp.config('html_ls', {
+vim.lsp.config['html_ls'] = {
   cmd = { 'vscode-html-language-server', '--stdio' },
   filetypes = { 'html', 'templ' },
   root_markers = { 'package.json' },
-})
+}
 vim.lsp.enable('html_ls')
 
 -- JSON
-vim.lsp.config('jsonls', {
+vim.lsp.config['jsonls'] = {
   cmd = { 'vscode-json-language-server', '--stdio' },
   filetypes = { 'json', 'jsonc' },
-})
+}
 vim.lsp.enable('jsonls')
 
 -- Lua
-vim.lsp.config('luals', {
+vim.lsp.config['luals'] = {
   cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
   root_markers = { '.luarc.json', '.luarc.jsonc' },
@@ -44,10 +44,10 @@ vim.lsp.config('luals', {
       end
     end
 
-    client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+  end,
+  settings = {
+    Lua = {
       runtime = {
-        -- Tell the language server which version of Lua you're using (most
-        -- likely LuaJIT in the case of Neovim)
         version = 'LuaJIT',
         -- Tell the language server how to find Lua modules same way as Neovim
         -- (see `:h lua-module-load`)
@@ -72,24 +72,21 @@ vim.lsp.config('luals', {
         -- See https://github.com/neovim/nvim-lspconfig/issues/3189
         -- library = vim.api.nvim_get_runtime_file('', true),
       },
-    })
-  end,
-  settings = {
-    Lua = {},
+    },
   },
-})
+}
 vim.lsp.enable('luals')
 
 -- Markdown
-vim.lsp.config('markdown_oxide', {
+vim.lsp.config['markdown_oxide'] = {
   cmd = { 'markdown-oxide' },
   filetypes = { 'markdown' },
   root_markers = { '.obsidian', '.moxide.toml' },
-})
+}
 vim.lsp.enable('markdown_oxide')
 
 -- Python
-vim.lsp.config('jedi-language-server', {
+vim.lsp.config['jedi-language-server'] = {
   cmd = { 'jedi-language-server' },
   filetypes = { 'python' },
   root_markers = {
@@ -99,11 +96,11 @@ vim.lsp.config('jedi-language-server', {
     'requirements.txt',
     'Pipfile',
   },
-})
+}
 vim.lsp.enable('jedi-language-server')
 
 -- Tailwind
-vim.lsp.config('tailwindcss', {
+vim.lsp.config['tailwindcss'] = {
   cmd = { 'tailwindcss-language-server', '--stdio' },
   filetypes = {
     'aspnetcorerazor',
@@ -157,11 +154,11 @@ vim.lsp.config('tailwindcss', {
     'svelte',
     'templ',
   }
-})
+}
 vim.lsp.enable('tailwindcss')
 
 -- TypeScript
-vim.lsp.config('ts_ls', {
+vim.lsp.config['ts_ls'] = {
   cmd = { 'typescript-language-server', '--stdio' },
   filetypes = {
     'javascript',
@@ -169,5 +166,5 @@ vim.lsp.config('ts_ls', {
     'typescript',
     'typescriptreact',
   },
-})
+}
 vim.lsp.enable('ts_ls')
