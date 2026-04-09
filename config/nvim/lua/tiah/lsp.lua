@@ -13,6 +13,29 @@ vim.lsp.config['bashls'] = {
 }
 vim.lsp.enable('bashls')
 
+-- C/C++
+vim.lsp.config['clangd'] = {
+  cmd = { 'clangd' },
+  filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
+}
+vim.lsp.enable('clangd')
+
+-- CMake
+vim.lsp.config['cmake'] = {
+  cmd = { 'cmake-language-server' },
+  filetypes = { 'cmake' },
+  init_options = {
+    buildDiectory = 'build',
+  },
+  root_markers = {
+    'CMakePresets.json',
+    'CTestConfig.cmake',
+    'build',
+    'cmake',
+  },
+}
+vim.lsp.enable('clangd')
+
 -- HTML
 vim.lsp.config['html_ls'] = {
   cmd = { 'vscode-html-language-server', '--stdio' },
