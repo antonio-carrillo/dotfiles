@@ -18,14 +18,19 @@ vim.keymap.set('n', '*', '*zzzv')
 vim.keymap.set('n', '#', '#zzzv')
 
 -- Show/hide
-vim.keymap.set('n', '<leader><F1>', ':set list!<CR>')
-
--- Diagnostic navigation 
-vim.keymap.set('n', '<leader>k', vim.diagnostic.goto_prev)
-vim.keymap.set('n', '<leader>j', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<C-j>', function()
-    vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+vim.keymap.set('n', '<leader>tc', function ()
+  vim.o.cursorbind = not vim.o.cursorbind
 end)
-vim.keymap.set('n', '<C-k>', function()
-    vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+vim.keymap.set('n', '<leader>tl', function ()
+  vim.o.list = not vim.o.list
+end)
+vim.keymap.set('n', '<leader>ts', function ()
+  local enabled = vim.o.cursorcolumn
+  vim.o.cursorcolumn = not enabled
+  vim.o.cursorline = not enabled
+end)
+vim.keymap.set('n', '<leader>tw', function ()
+  local enabled = vim.o.wrap
+  vim.o.wrap = not enabled
+  vim.o.linebreak = not enabled
 end)
