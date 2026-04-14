@@ -192,3 +192,12 @@ vim.lsp.config['ts_ls'] = {
   },
 }
 vim.lsp.enable('ts_ls')
+
+-- YAML
+vim.lsp.config['yamlls'] = {
+  cmd = { 'yaml-language-server', '--stdio' },
+  filetypes = {
+    'yaml',
+  },
+}
+vim.lsp.enable('yamlls')
