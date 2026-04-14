@@ -2,18 +2,30 @@
 [ -s "/usr/bin/batcat" ] && alias bat='batcat'
 [ -s "/usr/bin/fdfind" ] && alias fd='fdfind'
 
+# WSL
+
+if command -v 'pwsh.exe' &> /dev/null
+then
+  alias start='pwsh.exe -c start'
+elif command -v 'powershell.exe' &> /dev/null
+then
+  alias start='powershell.exe -c start'
+fi
+
 # shortenings
 alias v='nvim'
+alias vt='nvim -c "set wrap" -c "set linebreak"'
 
 # bat
 alias batm='bat --style=plain --color=never'
 alias batp='bat --paging=always --wrap=never'
 
 # eza
-alias ls='eza -gh --icons=auto'
+alias ls='eza -gh --group-directories-first --icons=auto'
 alias lsm='eza -g --icons=never --color=never'
+alias ls1='ls -1'
 alias tree='eza --tree --icons=auto'
-alias treed='eza --tree --icons=auto --only-dirs'
+alias treed='tree --only-dirs'
 alias treem='eza --tree --icons=never --color=never'
 
 # Git
@@ -75,3 +87,44 @@ alias tx='tmuxinator'
 
 # lsblk
 alias lsblkfull='lsblk -o FSTYPE,TYPE,FSSIZE,FSUSE%,NAME,LABEL,MODEL,MOUNTPOINTS'
+
+# Clang 19 tools
+
+clang_tools=(
+    'clang++'
+    'clang-format'
+    'clang-pseudo'
+    'clang'
+    'clang-format-diff'
+    'clang-query'
+    'clang-apply-replacements'
+    'clang-include-cleaner'
+    'clang-refactor'
+    'clang-change-namespace'
+    'clang-include-fixer'
+    'clang-rename'
+    'clang-check'
+    'clang-installapi'
+    'clang-reorder-fields'
+    'clang-cl'
+    'clang-linker-wrapper'
+    'clang-repl'
+    'clang-cpp'
+    'clang-move'
+    'clang-scan-deps'
+    'clangd'
+    'clang-nvlink-wrapper'
+    'clang-tblgen'
+    'clang-doc'
+    'clang-offload-bundler'
+    'clang-extdef-mapping'
+    'clang-offload-packager'
+)
+
+for tool in "${clang_tools[@]}"
+do
+    tool_19="${tool}-19"
+    if ! command -v ${tool} >/dev/null && command -v ${tool_19} >/dev/null; then
+        alias ${tool}=${tool_19}
+    fi
+done
