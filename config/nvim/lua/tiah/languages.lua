@@ -11,19 +11,21 @@ vim.api.nvim_create_autocmd('FileType', {
       'htmldjango',
       'javascript',
       'javascriptreact',
-      'typescript',
-      'typescriptreact',
       'json',
       'json5',
       'lua',
       'markdown',
+      'sh',
+      'typescript',
+      'typescriptreact',
+      'zsh',
     }
 
     for _, language in ipairs(two_tabstop) do
       if filetype == language then
-        vim.opt.tabstop = 2
-        vim.opt.softtabstop = 2
-        vim.opt.shiftwidth = 2
+        vim.o.tabstop = 2
+        vim.o.softtabstop = 2
+        vim.o.shiftwidth = 2
       end
     end
   end

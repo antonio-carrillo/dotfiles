@@ -1,6 +1,9 @@
 -- Leader with space
 vim.g.mapleader = ' '
 
+-- Quick changes
+vim.keymap.set('n', '<leader>~', 'viW~E')
+
 -- Explore
 vim.keymap.set('n', '<leader>pv', vim.cmd.Explore)
 
