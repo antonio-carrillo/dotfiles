@@ -1,6 +1,9 @@
 -- Here languages are added to the NeoVim LSP.
 -- This requires each LSP server to be installed in the system or the
--- mason-lspconfig plugin to retrieve it.
+-- Mason plugin to retrieve it.
+-- Call `:Mason`, search the language you want and its LSP, then add it below.
+-- Check https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
+-- for configurations.
 
 vim.lsp.config['*'] = {
   root_markers = { '.git' },
@@ -34,15 +37,15 @@ vim.lsp.config['cmake'] = {
     'cmake',
   },
 }
-vim.lsp.enable('clangd')
+vim.lsp.enable('cmake')
 
 -- HTML
-vim.lsp.config['html_ls'] = {
+vim.lsp.config['html'] = {
   cmd = { 'vscode-html-language-server', '--stdio' },
-  filetypes = { 'html', 'templ' },
+  filetypes = { 'html', 'template' },
   root_markers = { 'package.json' },
 }
-vim.lsp.enable('html_ls')
+vim.lsp.enable('html')
 
 -- JSON
 vim.lsp.config['jsonls'] = {
@@ -52,7 +55,7 @@ vim.lsp.config['jsonls'] = {
 vim.lsp.enable('jsonls')
 
 -- Lua
-vim.lsp.config['luals'] = {
+vim.lsp.config['lua_ls'] = {
   cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
   root_markers = { '.luarc.json', '.luarc.jsonc' },
@@ -66,7 +69,6 @@ vim.lsp.config['luals'] = {
         return
       end
     end
-
   end,
   settings = {
     Lua = {
@@ -98,7 +100,7 @@ vim.lsp.config['luals'] = {
     },
   },
 }
-vim.lsp.enable('luals')
+vim.lsp.enable('lua_ls')
 
 -- Markdown
 vim.lsp.config['markdown_oxide'] = {
@@ -109,7 +111,7 @@ vim.lsp.config['markdown_oxide'] = {
 vim.lsp.enable('markdown_oxide')
 
 -- Python
-vim.lsp.config['jedi-language-server'] = {
+vim.lsp.config['jedi_language_server'] = {
   cmd = { 'jedi-language-server' },
   filetypes = { 'python' },
   root_markers = {
@@ -120,7 +122,7 @@ vim.lsp.config['jedi-language-server'] = {
     'Pipfile',
   },
 }
-vim.lsp.enable('jedi-language-server')
+vim.lsp.enable('jedi_language_server')
 
 -- Tailwind
 vim.lsp.config['tailwindcss'] = {
@@ -131,7 +133,6 @@ vim.lsp.config['tailwindcss'] = {
     'astro-markdown',
     'blade',
     'clojure',
-    'django-html',
     'htmldjango',
     'edge',
     'eelixir',
@@ -175,8 +176,8 @@ vim.lsp.config['tailwindcss'] = {
     'typescriptreact',
     'vue',
     'svelte',
-    'templ',
-  }
+    'template',
+  },
 }
 vim.lsp.enable('tailwindcss')
 
