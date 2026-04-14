@@ -1,9 +1,9 @@
 add_newline = false
 format = """\
-[](fg:blue)\
+[](fg:bright-blue)\
 $os\
-[](fg:blue bg:#596a9b)\
-[](fg:#596a9b bg:black)\
+[](fg:bright-blue bg:blue)\
+[](fg:blue bg:black)\
 $directory\
 [](fg:black)\
 ($git_branch)\
@@ -66,7 +66,7 @@ diverged = '⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
 
 [os]
-style = 'bg:blue fg:black'
+style = 'bg:bright-blue fg:black'
 format = '[$symbol ($version)]($style)'
 disabled = false
 
