@@ -21,18 +21,18 @@ vim.keymap.set('n', '*', '*zzzv')
 vim.keymap.set('n', '#', '#zzzv')
 
 -- Show/hide
-vim.keymap.set('n', '<leader>tc', function ()
+vim.keymap.set('n', '<leader>tc', function()
   vim.o.cursorbind = not vim.o.cursorbind
 end)
-vim.keymap.set('n', '<leader>tl', function ()
+vim.keymap.set('n', '<leader>tl', function()
   vim.o.list = not vim.o.list
 end)
-vim.keymap.set('n', '<leader>ts', function ()
+vim.keymap.set('n', '<leader>ts', function()
   local enabled = vim.o.cursorcolumn
   vim.o.cursorcolumn = not enabled
   vim.o.cursorline = not enabled
 end)
-vim.keymap.set('n', '<leader>tw', function ()
+vim.keymap.set('n', '<leader>tw', function()
   local enabled = vim.o.wrap
   vim.o.wrap = not enabled
   vim.o.linebreak = not enabled

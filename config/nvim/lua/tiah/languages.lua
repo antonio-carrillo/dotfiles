@@ -28,5 +28,5 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.o.shiftwidth = 2
       end
     end
-  end
+  end,
 })

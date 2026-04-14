@@ -24,8 +24,11 @@ return {
         ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
         ['<C-n>'] = {
           function(cmp)
-            if cmp.snippet_active() then return cmp.select_next()
-            else return cmp.show() end
+            if cmp.snippet_active() then
+              return cmp.select_next()
+            else
+              return cmp.show()
+            end
           end,
           'select_next',
           'fallback',
