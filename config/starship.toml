@@ -1,18 +1,25 @@
 add_newline = false
 format = """\
-[](fg:bright-blue)\
+[](fg:bright-yellow)\
 $os\
-[](fg:bright-blue bg:blue)\
-[](fg:blue bg:black)\
+[](fg:bright-yellow)\
+[](fg:yellow)\
+[](fg:yellow inverted)\
+$username\
+$hostname\
+[](fg:yellow)\
+[](fg:black inverted bold dimmed)\
 $directory\
-[](fg:black)\
+[](fg:black bold dimmed)\
 ($git_branch)\
 ($git_status)\
 ($fill )\
 ($python )\
 ($jobs )\
-($status )\
-$time
+([](fg:red)$status[](fg:red inverted)[](fg:red))\
+[](fg:yellow dimmed)\
+$time\
+[](fg:yellow dimmed)
 ($character) \
 """
 
@@ -21,15 +28,15 @@ right_format = """\
 
 [character]
 format = '[$symbol](bold)'
-success_symbol = '[](green)'
-error_symbol = '[](red)'
+success_symbol = '[»](green)'
+error_symbol = '[»](red)'
 vimcmd_symbol = '[-](green)'
 vimcmd_replace_one_symbol = '[_](purple)'
 vimcmd_replace_symbol = '[_](purple)'
 vimcmd_visual_symbol = '[█](green)'
 
 [directory]
-style = 'bold bg:black fg:white'
+style = 'fg:black bg:white inverted bold dimmed'
 format = """\
 [$path]($style)\
 [$read_only]($read_only_style)\
@@ -39,8 +46,8 @@ truncation_symbol = '…/'
 read_only = '󰌾'
 
 [fill]
-symbol = '–'
-style = 'bold black'
+symbol = '>'
+style = 'fg:yellow dimmed'
 
 [jobs]
 format = '[$symbol$number]($style)'
@@ -48,17 +55,17 @@ symbol = ''
 style = 'fg:purple'
 
 [hostname]
-ssh_only = false
-style = 'bold bg:blue fg:black'
+ssh_only = true
+style = 'bg:yellow fg:black'
 format = '[@$hostname]($style)'
 
 [git_branch]
-style = 'fg:bright-blue'
+style = 'fg:bright-yellow'
 symbol = '󰘬'
 format = '[$symbol$branch(:$remote_branch)]($style)'
 
 [git_status]
-style = 'fg:blue'
+style = 'fg:yellow'
 renamed = '~'
 deleted = '-'
 ahead = '⇡${count}'
@@ -66,11 +73,13 @@ diverged = '⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
 
 [os]
-style = 'bg:bright-blue fg:black'
+style = 'bg:bright-yellow fg:black'
 format = '[$symbol ($version)]($style)'
 disabled = false
 
 [os.symbols]
+Alpine = ''
+Amazon = ' '
 Android = ''
 Arch = '󰣇'
 Debian = ''
@@ -81,6 +90,7 @@ Mint = '󰣭'
 Pop = ''
 Raspbian = ''
 Redhat = '󱄛'
+RedHatEnterprise = '󱄛'
 Ubuntu = ''
 Unknown = '?'
 Windows = ''
@@ -91,20 +101,20 @@ format = '[$symbol$virtualenv(:$version)]($style)'
 version_format = '$major.$minor'
 
 [status]
-format = '[$symbol$status]($style)'
-symbol = '!'
-not_executable_symbol = '⊖'
-not_found_symbol = '?'
+format = '[$symbol $status]($style)'
+symbol = '󰀪'
+not_executable_symbol = '󱏏'
+not_found_symbol = ''
 style = 'bg:red fg:yellow'
 disabled = false
 
 [time]
-format = '[$time]($style)'
-style = 'fg:white'
+format = '[ $time]($style)'
+style = 'fg:yellow bg:black dimmed inverted'
 disabled = false
 
 [username]
-style_root = 'bold bg:blue fg:red'
-style_user = 'bold bg:blue fg:black'
-format = '[$user]($style)'
+style_root = 'bg:yellow fg:red underline'
+style_user = 'bg:yellow fg:black'
+format = '[ $user]($style)'
 show_always = true
