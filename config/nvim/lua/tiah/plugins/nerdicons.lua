@@ -10,6 +10,6 @@ return {
       register = '*',
     })
 
-    vim.keymap.set('n', '<leader>n', vim.cmd.NerdIcons)
+    vim.keymap.set('n', '<leader>n', vim.cmd.NerdIcons, { desc = 'Nerd Icons' })
   end,
 }

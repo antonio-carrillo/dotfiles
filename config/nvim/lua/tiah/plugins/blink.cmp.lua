@@ -17,7 +17,7 @@ return {
         },
       },
       keymap = {
-        ['<C-s'] = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<C-s>'] = { 'show', 'show_documentation', 'hide_documentation' },
         ['<C-h>'] = { 'hide', 'fallback' },
         ['<C-y>'] = { 'select_and_accept', 'fallback' },
 

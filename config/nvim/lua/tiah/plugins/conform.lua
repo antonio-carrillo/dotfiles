@@ -36,6 +36,6 @@ return {
     }
 
     -- Keymap
-    vim.keymap.set({ 'n', 'v' }, '<leader>f', conform.format)
+    vim.keymap.set({ 'n', 'v' }, '<leader>f', conform.format, { desc = 'Conform format code' })
   end,
 }
