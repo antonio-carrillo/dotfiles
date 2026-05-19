@@ -6,6 +6,7 @@ vim.keymap.set('n', '<leader>~', 'viW~E', { desc = 'Toggle capital letters for W
 
 -- Explore
 vim.keymap.set('n', '<leader>pv', vim.cmd.Explore, { desc = 'Explore files' })
+vim.keymap.set('n', '<leader>de', vim.cmd.NvimTreeToggle, { desc = 'Toggle tree explorer' })
 
 -- Move lines on visual
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move down selected lines' })
