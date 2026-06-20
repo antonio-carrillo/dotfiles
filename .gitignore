@@ -4,3 +4,4 @@ config/nvim/lazy-lock.json
 
 # zsh
 config/zsh/plugins/
+config/zsh/completitions/
