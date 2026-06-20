@@ -5,7 +5,6 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>~', 'viW~E', { desc = 'Toggle capital letters for WORD' })
 
 -- Explore
-vim.keymap.set('n', '<leader>pv', vim.cmd.Explore, { desc = 'Explore files' })
 vim.keymap.set('n', '<leader>de', vim.cmd.NvimTreeToggle, { desc = 'Toggle tree explorer' })
 
 -- Move lines on visual
