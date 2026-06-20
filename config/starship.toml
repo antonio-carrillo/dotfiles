@@ -3,12 +3,11 @@ format = """\
 [](fg:bright-yellow)\
 $os\
 [](fg:bright-yellow)\
-[](fg:yellow)\
-[](fg:yellow inverted)\
+[](fg:yellow)\
 $username\
 $hostname\
 [](fg:yellow)\
-[](fg:black inverted bold dimmed)\
+[](fg:black bold dimmed)\
 $directory\
 [](fg:black bold dimmed)\
 ($git_branch)\
@@ -16,7 +15,7 @@ $directory\
 ($fill )\
 ($python )\
 ($jobs )\
-([](fg:red)$status[](fg:red inverted)[](fg:red))\
+([](fg:red)$status[](fg:red)[](fg:red))\
 [](fg:yellow dimmed)\
 $time\
 [](fg:yellow dimmed)

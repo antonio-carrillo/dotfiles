@@ -68,7 +68,7 @@ alias kih='kitten icat --hold'
 
 # Python
 alias py-activate='source env/bin/activate'
-alias py-env='pip install \
+alias py-essentials='pip install \
     autopep8 \
     ptpython \
     flake8 \
@@ -79,11 +79,11 @@ alias py-env='pip install \
     '
 alias py-new-env='python3 -m venv env \
     && py-activate \
-    && py-env \
+    && py-essentials \
     '
 
 # Tmuxinator
-alias tx='tmuxinator'
+alias tx='tmuxp'
 
 # lsblk
 alias lsblkfull='lsblk -o FSTYPE,TYPE,FSSIZE,FSUSE%,NAME,LABEL,MODEL,MOUNTPOINTS'
@@ -124,7 +124,8 @@ clang_tools=(
 for tool in "${clang_tools[@]}"
 do
     tool_19="${tool}-19"
-    if ! command -v ${tool} >/dev/null && command -v ${tool_19} >/dev/null; then
+    if ! command -v ${tool} >/dev/null && command -v ${tool_19} >/dev/null
+    then
         alias ${tool}=${tool_19}
     fi
 done
