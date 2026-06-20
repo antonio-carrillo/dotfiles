@@ -14,6 +14,7 @@ return {
         c = { 'clang-format' },
         cpp = { 'clang-format' },
         css = { 'prettierd' },
+        html = { 'prettierd' },
         javascript = { 'prettierd' },
         javascriptreact = { 'prettierd' },
         json = { 'jq' },

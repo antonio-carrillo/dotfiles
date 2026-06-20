@@ -9,9 +9,6 @@ return {
     blink.setup({
       completion = {
         documentation = { auto_show = true },
-        ghost_text = {
-          enabled = true,
-        },
         trigger = {
           show_on_backspace_in_keyword = true,
         },

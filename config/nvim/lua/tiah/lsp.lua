@@ -124,62 +124,29 @@ vim.lsp.config['jedi_language_server'] = {
 }
 vim.lsp.enable('jedi_language_server')
 
--- Tailwind
-vim.lsp.config['tailwindcss'] = {
-  cmd = { 'tailwindcss-language-server', '--stdio' },
-  filetypes = {
-    'aspnetcorerazor',
-    'astro',
-    'astro-markdown',
-    'blade',
-    'clojure',
-    'htmldjango',
-    'edge',
-    'eelixir',
-    'elixir',
-    'ejs',
-    'erb',
-    'eruby',
-    'gohtml',
-    'gohtmltmpl',
-    'haml',
-    'handlebars',
-    'hbs',
-    'html',
-    'htmlangular',
-    'html-eex',
-    'heex',
-    'jade',
-    'leaf',
-    'liquid',
-    'markdown',
-    'mdx',
-    'mustache',
-    'njk',
-    'nunjucks',
-    'php',
-    'razor',
-    'slim',
-    'twig',
-    'css',
-    'less',
-    'postcss',
-    'sass',
-    'scss',
-    'stylus',
-    'sugarss',
-    'javascript',
-    'javascriptreact',
-    'reason',
-    'rescript',
-    'typescript',
-    'typescriptreact',
-    'vue',
-    'svelte',
-    'template',
+-- CSS
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+vim.lsp.config['cssls'] = {
+  capabilities = capabilities,
+  cmd = { 'vscode-css-language-server', '--stdio' },
+  filetypes = { 'css', 'scss', 'less' },
+  provideFormatter = true,
+  root_markers = { 'package.json' },
+  settings = {
+    css = {
+      validate = true,
+    },
+    less = {
+      validate = true,
+    },
+    scss = {
+      validate = true,
+    },
   },
 }
-vim.lsp.enable('tailwindcss')
+vim.lsp.enable('cssls')
 
 -- TypeScript
 vim.lsp.config['ts_ls'] = {
