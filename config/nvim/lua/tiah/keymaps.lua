@@ -37,3 +37,7 @@ vim.keymap.set('n', '<leader>tw', function()
   vim.o.wrap = not enabled
   vim.o.linebreak = not enabled
 end, { desc = 'Toggle text mode' })
+vim.keymap.set('n', '<leader>tn', function()
+  local enabled = vim.o.relativenumber
+  vim.o.relativenumber = not enabled
+end, { desc = ' Toggle relative numbers' })
