@@ -5,7 +5,7 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
-     indent = { enabled = true },
+    indent = { enabled = true },
     input = { enabled = true },
     picker = { enabled = true },
   },
@@ -21,7 +21,7 @@ return {
       })
     end, desc = 'Pick all files' },
     { '<leader>pv', function() Snacks.picker.explorer() end, desc = 'Explore files' },
-    { '<leader>ps', function() Snacks.picker.grep_word() end, desc = 'Grep word' },
+    { '<leader>ps', function() Snacks.picker.grep() end, desc = 'Grep' },
     { '<leader>pi', function() Snacks.picker.icons() end, desc = 'Pick icon' },
     { '<leader>pk', function() Snacks.picker.keymaps() end, desc = 'Pick keymap' },
     { '<leader>pl', function() Snacks.picker.lines() end, desc = 'Pick line' },
