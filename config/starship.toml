@@ -24,6 +24,7 @@ $time\
 
 right_format = """\
 """
+scan_timeout=1500
 
 [character]
 format = '[$symbol](bold)'

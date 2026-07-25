@@ -40,7 +40,7 @@ vim.o.titlestring = '%t - Nvim'
 -- Characters
 vim.o.listchars = 'eol:$,tab:>-,trail:~,extends:>,precedes:<,space:·,nbsp:+'
 vim.o.matchpairs = '(:),{:},[:],<:>,‹:›,«:»,“:”,‘:’'
-vim.o.showbreak = '<+ '
+vim.o.showbreak = '›'
 
 -- Page
 vim.o.scrolloff = 8
