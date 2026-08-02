@@ -1,4 +1,4 @@
 export EDITOR=nvim
 export VISUAL=$EDITOR
 
-fpath=(~/.config/.zsh/completions/ $fpath)
+fpath=(~/.config/zsh/completions/ $fpath)
