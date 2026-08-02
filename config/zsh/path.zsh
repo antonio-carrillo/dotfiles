@@ -11,8 +11,19 @@
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+if [ -s "$NVM_DIR/nvm.sh" ]
+then
+  \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  if [ -f "$NVM_DIR/alias/default" ]
+  then
+    DEFAULT_NODE_VERSION=$(cat "$NVM_DIR/alias/default")
+    nvm use "$DEFAULT_NODE_VERSION" >/dev/null 2>&1
+  fi
+fi
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# yarn
+[ -s "$HOME/.yarn/bin" ] && export PATH=$PATH:$HOME/.yarn/bin
 
 # Rust
 [ -s "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
