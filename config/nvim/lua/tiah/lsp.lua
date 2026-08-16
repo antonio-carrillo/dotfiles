@@ -2,12 +2,13 @@ vim.lsp.config['*'] = {
   root_markers = { '.git' },
 }
 
--- command = language script
-servers = {
+-- Expected commands and their language script to import
+local servers = {
+  ['lua-language-server'] = 'lua',
   pylsp = 'python',
 }
 
--- If command exists, language will be imported
+-- If command exists then the language will be imported
 for command, language in pairs(servers) do
   if vim.fn.executable(command) == 1 then
     require('tiah.lsp.' .. language)
