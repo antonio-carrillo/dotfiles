@@ -1,5 +1,3 @@
--- If you dont have the command, you can install the formatter with Mason.
-
 return {
   'stevearc/conform.nvim',
   default_format_opts = {
@@ -20,7 +18,7 @@ return {
         json = { 'jq' },
         lua = { 'stylua' },
         markdown = { 'mdformat' },
-        python = { 'autopep8' },
+        python = { 'yapf' },
         typescript = { 'prettierd' },
         typescriptreact = { 'prettierd' },
         yaml = { 'yamlfmt' },
