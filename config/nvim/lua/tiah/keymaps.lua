@@ -10,12 +10,15 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move up selected lines' }
 
 -- Minor improvements to existing keymaps
 vim.keymap.set('n', 'J', 'mtJ`t', { desc = 'Combine lines without moving the cursor' })
-vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Move up centering' })
-vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Move down centering' })
-vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next coincidence centering' })
-vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Previous coincidence centering' })
-vim.keymap.set('n', '*', '*zzzv', { desc = 'Next hovered coincidence centering' })
-vim.keymap.set('n', '#', '#zzzv', { desc = 'Previous hovered coincidence centering' })
+vim.keymap.set('n', '<C-u>', '<C-u>zt', { desc = 'Move up and at top' })
+vim.keymap.set('n', '<C-d>', '<C-d>zt', { desc = 'Move down and at top' })
+vim.keymap.set('n', 'n', 'nztzv', { desc = 'Next coincidence and at top' })
+vim.keymap.set('n', 'N', 'Nztzv', { desc = 'Previous coincidence and at top' })
+vim.keymap.set('n', '*', '*ztzv', { desc = 'Next hovered coincidence and at top' })
+vim.keymap.set('n', '#', '#ztzv', { desc = 'Previous hovered coincidence and at top' })
+
+-- Paste keeping buffer
+vim.keymap.set('v', '<leader>p', '"_dP', { desc = 'Paste keeping buffer' })
 
 -- Show/hide
 vim.keymap.set('n', '<leader>tc', function()
