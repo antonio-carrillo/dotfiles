@@ -1,0 +1,49 @@
+local opencode_cmd = 'opencode'
+
+---@type snacks.terminal.Opts
+local terminal_opts = {
+  win = {
+    position = 'right',
+    enter = false,
+  },
+}
+
+return {
+  'nickjvandyke/opencode.nvim',
+  cond = vim.fn.executable(opencode_cmd) == 1,
+  dependencies = { 'folke/snacks.nvim' },
+  config = function()
+    ---@type opencode.Opts
+    vim.g.opencode_opts = {
+      server = {
+        start = function()
+          require('snacks.terminal').open(opencode_cmd, terminal_opts)
+        end,
+      },
+    }
+
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'OpencodeEvent:session.execution.started',
+      callback = function()
+        local win = require('snacks.terminal').get(opencode_cmd, { create = false })
+        if win then
+          win:show()
+        end
+      end,
+    })
+
+    -- Useful keymaps
+    vim.keymap.set({ 'n', 'x' }, '<leader>oa', function()
+      require('opencode').ask('@this: ')
+    end, { desc = 'Ask OpenCode' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>os', function()
+      require('opencode').select()
+    end, { desc = 'Select OpenCode' })
+    vim.keymap.set({ 'n' }, '<leader>og', function()
+      return require('opencode').operator('@this') .. '_'
+    end, { desc = 'Send line to OpenCode', expr = true })
+    vim.keymap.set({ 'n', 't' }, '<leader>ot', function()
+      require('snacks.terminal').toggle(opencode_cmd, terminal_opts)
+    end, { desc = 'Toggle OpenCode' })
+  end,
+}
