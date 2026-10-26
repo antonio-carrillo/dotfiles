@@ -67,20 +67,17 @@ alias kic='kitten icat --clear'
 alias kih='kitten icat --hold'
 
 # Python
-alias py-activate='source env/bin/activate'
-alias py-essentials='pip install \
-    autopep8 \
-    ptpython \
-    flake8 \
-    yapf \
-    jedi \
-    pynvim \
-    tox \
-    '
-alias py-new-env='python3 -m venv env \
-    && py-activate \
-    && py-essentials \
-    '
+alias uv-devtools='
+  uv tool install csvkit
+  uv tool install flake8
+  uv tool install ipython
+  uv tool install jinja-lsp
+  uv tool install mdformat
+  uv tool install posting
+  uv tool install pynvim
+  uv tool install python-lsp-server[flake8,yapf]
+  uv tool install yapf
+'
 
 # Tmuxinator
 alias tx='tmuxp'
