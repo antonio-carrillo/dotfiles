@@ -25,7 +25,11 @@ vim.o.wrap = false
 -- Backups
 vim.o.swapfile = false
 vim.o.backup = false
-vim.o.undodir = os.getenv('HOME') .. '/.vim/undodir'
+if vim.fn.has('win32') == 1 then
+  vim.o.undodir = os.getenv('UserProfile') .. '\\.vim\\undodir'
+else
+  vim.o.undodir = os.getenv('HOME') .. '/.vim/undodir'
+end
 vim.o.undofile = true
 
 -- Search
@@ -52,3 +56,14 @@ vim.o.colorcolumn = '80'
 vim.o.equalalways = false
 vim.o.pumblend = 50
 vim.o.winborder = 'rounded'
+
+-- Terminal
+-- PowerShell on Windows
+if vim.fn.has('win32') == 1 and vim.fn.executable('pwsh') == 1 then
+  vim.o.shell = 'pwsh'
+  vim.o.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
+  vim.o.shellquote = ''
+  vim.o.shellxquote = ''
+elseif vim.fn.has('unix') == 1 and vim.fn.executable('bash') == 1 then
+  vim.o.shell = 'bash'
+end
